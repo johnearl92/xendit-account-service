@@ -3,7 +3,7 @@ package db
 
 import (
 	"fmt"
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/model"
 
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/postgres"

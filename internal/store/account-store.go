@@ -3,7 +3,7 @@ package store
 import (
 	"github.com/google/uuid"
 	"github.com/jinzhu/gorm"
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/model"
 	log "github.com/sirupsen/logrus"
 )
 

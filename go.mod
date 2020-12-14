@@ -1,4 +1,4 @@
-module github.com/johnearl92/xendit-account-service.git
+module github.com/johnearl92/xendit-account-service
 
 go 1.12
 

@@ -2,7 +2,7 @@ package store
 
 import (
 	"errors"
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/model"
 
 	"github.com/jinzhu/gorm"
 	log "github.com/sirupsen/logrus"

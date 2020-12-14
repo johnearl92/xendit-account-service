@@ -1,7 +1,7 @@
 package store
 
 import (
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/model"
 )
 
 // List contains list of models

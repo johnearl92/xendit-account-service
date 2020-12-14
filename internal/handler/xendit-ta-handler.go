@@ -16,9 +16,9 @@ package handler
 import (
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
-	"github.com/johnearl92/xendit-account-service.git/internal/service"
-	"github.com/johnearl92/xendit-account-service.git/internal/utils"
+	"github.com/johnearl92/xendit-account-service/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/service"
+	"github.com/johnearl92/xendit-account-service/internal/utils"
 	log "github.com/sirupsen/logrus"
 	"net/http"
 )

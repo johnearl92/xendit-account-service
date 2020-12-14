@@ -7,7 +7,7 @@ import (
 
 	"github.com/gorilla/handlers"
 
-	"github.com/johnearl92/xendit-account-service.git/internal/handler"
+	"github.com/johnearl92/xendit-account-service/internal/handler"
 
 	log "github.com/sirupsen/logrus"
 

@@ -1,9 +1,9 @@
 package handler
 
 import (
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
-	"github.com/johnearl92/xendit-account-service.git/internal/store"
-	"github.com/johnearl92/xendit-account-service.git/internal/utils"
+	"github.com/johnearl92/xendit-account-service/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/store"
+	"github.com/johnearl92/xendit-account-service/internal/utils"
 	log "github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/mock"

@@ -1,6 +1,6 @@
 package store
 
-import "github.com/johnearl92/xendit-account-service.git/internal/model"
+import "github.com/johnearl92/xendit-account-service/internal/model"
 
 // NewAccountList AccountList provider
 func NewAccountList() *AccountList {

@@ -2,8 +2,8 @@
 package service
 
 import (
-	"github.com/johnearl92/xendit-account-service.git/internal/model"
-	"github.com/johnearl92/xendit-account-service.git/internal/store"
+	"github.com/johnearl92/xendit-account-service/internal/model"
+	"github.com/johnearl92/xendit-account-service/internal/store"
 )
 
 // xenditService EOR service definition

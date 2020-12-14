@@ -5,11 +5,11 @@ package cmd
 import (
 	"github.com/google/wire"
 	"github.com/gorilla/mux"
-	"github.com/johnearl92/xendit-account-service.git/internal/db"
-	"github.com/johnearl92/xendit-account-service.git/internal/handler"
-	"github.com/johnearl92/xendit-account-service.git/internal/server"
-	"github.com/johnearl92/xendit-account-service.git/internal/service"
-	"github.com/johnearl92/xendit-account-service.git/internal/store"
+	"github.com/johnearl92/xendit-account-service/internal/db"
+	"github.com/johnearl92/xendit-account-service/internal/handler"
+	"github.com/johnearl92/xendit-account-service/internal/server"
+	"github.com/johnearl92/xendit-account-service/internal/service"
+	"github.com/johnearl92/xendit-account-service/internal/store"
 	"github.com/spf13/viper"
 )
 

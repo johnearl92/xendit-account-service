@@ -137,7 +137,7 @@
           "type": "string"
         }
       },
-      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+      "x-go-package": "github.com/johnearl92/xendit-account-service/internal/model"
     },
     "AccountRequest": {
       "type": "object",
@@ -155,7 +155,7 @@
           "x-go-name": "Name"
         }
       },
-      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+      "x-go-package": "github.com/johnearl92/xendit-account-service/internal/model"
     },
     "AccountResponse": {
       "type": "object",
@@ -177,7 +177,7 @@
           "x-go-name": "Name"
         }
       },
-      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+      "x-go-package": "github.com/johnearl92/xendit-account-service/internal/model"
     },
     "AccountResponseList": {
       "description": "AccountResponse comments response",
@@ -191,7 +191,7 @@
           "x-go-name": "Accounts"
         }
       },
-      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+      "x-go-package": "github.com/johnearl92/xendit-account-service/internal/model"
     },
     "GenericResponse": {
       "description": "GenericResponse generic response",
@@ -206,7 +206,7 @@
           "x-go-name": "Success"
         }
       },
-      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+      "x-go-package": "github.com/johnearl92/xendit-account-service/internal/model"
     },
     "JSONError": {
       "description": "JSONError generic response",
@@ -232,7 +232,7 @@
           "x-go-name": "Title"
         }
       },
-      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model/errors"
+      "x-go-package": "github.com/johnearl92/xendit-account-service/internal/model/errors"
     }
   },
   "responses": {

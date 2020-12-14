@@ -8,7 +8,7 @@ import (
 
 	log "github.com/sirupsen/logrus"
 
-	"github.com/johnearl92/xendit-account-service.git/internal/model/errors"
+	"github.com/johnearl92/xendit-account-service/internal/model/errors"
 )
 
 // ReadEntity reads request

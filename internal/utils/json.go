@@ -3,7 +3,7 @@ package utils
 import (
 	"encoding/json"
 
-	"github.com/johnearl92/xendit-account-service.git/internal/model/errors"
+	"github.com/johnearl92/xendit-account-service/internal/model/errors"
 )
 
 // FromJSON unmarshall to output
