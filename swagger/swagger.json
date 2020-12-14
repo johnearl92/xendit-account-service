@@ -1,0 +1,267 @@
+{
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "schemes": [
+    "http"
+  ],
+  "swagger": "2.0",
+  "info": {
+    "description": "Official-Receipt service API endpoints",
+    "title": "Official-Receipt API.",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8080",
+  "paths": {
+    "/accounts": {
+      "post": {
+        "description": "Add account",
+        "tags": [
+          "acct"
+        ],
+        "operationId": "AccountReq",
+        "parameters": [
+          {
+            "name": "Account",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AccountRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/AccountRes"
+          },
+          "400": {
+            "$ref": "#/responses/JSONErrors"
+          },
+          "500": {
+            "$ref": "#/responses/JSONErrors"
+          }
+        }
+      }
+    },
+    "/accounts/{id}": {
+      "get": {
+        "summary": "This will get the account via id",
+        "operationId": "acct",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/AccountRes"
+          },
+          "400": {
+            "$ref": "#/responses/JSONErrors"
+          },
+          "500": {
+            "$ref": "#/responses/JSONErrors"
+          }
+        }
+      },
+      "put": {
+        "summary": "This will update the account via id",
+        "operationId": "acct",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true
+          },
+          {
+            "name": "AccountReq",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/AccountReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "$ref": "#/responses/AccountRes"
+          },
+          "400": {
+            "$ref": "#/responses/JSONErrors"
+          },
+          "500": {
+            "$ref": "#/responses/JSONErrors"
+          }
+        }
+      }
+    },
+    "/health": {
+      "get": {
+        "summary": "This will check if the server is up",
+        "operationId": "GenericRes",
+        "responses": {
+          "200": {
+            "$ref": "#/responses/GenericRes"
+          },
+          "400": {
+            "$ref": "#/responses/JSONErrors"
+          },
+          "500": {
+            "$ref": "#/responses/JSONErrors"
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Account": {
+      "type": "object",
+      "properties": {
+        "CallbackUrl": {
+          "type": "string"
+        },
+        "MerchantCode": {
+          "type": "string"
+        },
+        "MerchantKey": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        }
+      },
+      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+    },
+    "AccountRequest": {
+      "type": "object",
+      "properties": {
+        "callbackUrl": {
+          "type": "string",
+          "x-go-name": "CallbackUrl"
+        },
+        "merchantCode": {
+          "type": "string",
+          "x-go-name": "MerchantCode"
+        },
+        "name": {
+          "type": "string",
+          "x-go-name": "Name"
+        }
+      },
+      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+    },
+    "AccountResponse": {
+      "type": "object",
+      "properties": {
+        "callbackUrl": {
+          "type": "string",
+          "x-go-name": "CallbackUrl"
+        },
+        "merchantCode": {
+          "type": "string",
+          "x-go-name": "MerchantCode"
+        },
+        "merchantKey": {
+          "type": "string",
+          "x-go-name": "MerchantKey"
+        },
+        "name": {
+          "type": "string",
+          "x-go-name": "Name"
+        }
+      },
+      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+    },
+    "AccountResponseList": {
+      "description": "AccountResponse comments response",
+      "type": "object",
+      "properties": {
+        "accounts": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Account"
+          },
+          "x-go-name": "Accounts"
+        }
+      },
+      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+    },
+    "GenericResponse": {
+      "description": "GenericResponse generic response",
+      "type": "object",
+      "properties": {
+        "reason": {
+          "type": "string",
+          "x-go-name": "Reason"
+        },
+        "success": {
+          "type": "boolean",
+          "x-go-name": "Success"
+        }
+      },
+      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model"
+    },
+    "JSONError": {
+      "description": "JSONError generic response",
+      "type": "object",
+      "properties": {
+        "detail": {
+          "type": "string",
+          "x-go-name": "Detail"
+        },
+        "source": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string"
+          },
+          "x-go-name": "Source"
+        },
+        "status": {
+          "type": "string",
+          "x-go-name": "Status"
+        },
+        "title": {
+          "type": "string",
+          "x-go-name": "Title"
+        }
+      },
+      "x-go-package": "github.com/johnearl92/xendit-account-service.git/internal/model/errors"
+    }
+  },
+  "responses": {
+    "AccountRes": {
+      "description": "AccountRes AccountResponse",
+      "schema": {
+        "$ref": "#/definitions/AccountResponse"
+      }
+    },
+    "AccountResponse": {
+      "description": "AccountResWrapperv wrapper struct for AccountResponse",
+      "schema": {
+        "$ref": "#/definitions/AccountResponseList"
+      }
+    },
+    "GenericRes": {
+      "description": "GenericRes response model",
+      "schema": {
+        "$ref": "#/definitions/GenericResponse"
+      }
+    },
+    "JSONErrors": {
+      "description": "JSONErrors response model",
+      "schema": {
+        "type": "array",
+        "items": {
+          "$ref": "#/definitions/JSONError"
+        }
+      }
+    }
+  }
+}
